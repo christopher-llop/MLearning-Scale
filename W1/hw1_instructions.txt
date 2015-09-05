@@ -87,6 +87,8 @@ HW1.4. Provide a mapper/reducer pair that, when executed by pNaiveBayes.sh
    - mapper.py counts all occurrences of a list of words, and
    - reducer.py performs the multiple-word Naive Bayes classification via the chosen list.
 
+
+
 HW1.5. Provide a mapper/reducer pair that, when executed by pNaiveBayes.sh
    will classify the email messages by all words present.
    To do so, make sure that
@@ -121,6 +123,31 @@ the original paper by our curators of the Enron email data:
 http://www.aueb.gr/users/ion/docs/ceas2006_paper.pdf
 
 or the recording of this week's live lecture that you will find on the LMS.
+
+
+HW1.6 IS NEW as of 2015/09/03  
+
+HW1.6 Benchmark your code with the Python SciKit-Learn implementation of Naive Bayes
+
+It always a good idea to test your solutions against publicly available libraries such as SciKit-Learn, The Machine Learning toolkit available in Python. In this exercise, we benchmark ourselves against the SciKit-Learn implementation of Naive Bayes.  For more information on this implementation see: http://scikit-learn.org/stable/modules/naive_bayes.html more  
+
+Lets define  Training error = misclassification rate with respect to a training set. It is more formally defined here:
+
+Let DF represent the training set in the following:
+Err(Model, DF) = |{(X, c(X)) ∈ DF : c(X) != Model(x)}|   / |DF|
+
+Where || denotes set cardinality; c(X) denotes the class of the tuple X in DF; and Model(X) denotes the class inferred by the Model “Model”
+
+In this exercise, please complete the following:
+
+— Run the Multinomial Naive Bayes algorithm (using default settings) from SciKit-Learn over the same training data used in HW1.5 and report the Training error (please note some data preparation might be needed to get the Multinomial Naive Bayes algorithm from SkiKit-Learn to run over this dataset)
+— Run the Bernoulli Naive Bayes algorithm from SciKit-Learn (using default settings) over the same training data used in HW1.5 and report the Training error 
+— Run the Multinomial Naive Bayes algorithm you developed for HW1.5 over the same data used HW1.5 and report the Training error 
+- Please prepare a table to present your results
+— Explain/justify any differences in terms of training error rates over the dataset in HW1.5 between your Multinomial Naive Bayes implementation (in Map Reduce) versus the Multinomial Naive Bayes implementation in SciKit-Learn
+- Discuss the performance differences in terms of training error rates over the dataset in HW1.5 between the  Multinomial Naive Bayes implementation in SciKit-Learn with the  Bernoulli Naive Bayes implementation in SciKit-Learn
+
+
 
 =====Output=====
 
